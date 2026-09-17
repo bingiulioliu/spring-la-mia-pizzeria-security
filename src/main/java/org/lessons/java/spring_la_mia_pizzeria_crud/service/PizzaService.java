@@ -2,7 +2,6 @@ package org.lessons.java.spring_la_mia_pizzeria_crud.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Locale.Category;
 
 import org.lessons.java.spring_la_mia_pizzeria_crud.model.Offerta;
 import org.lessons.java.spring_la_mia_pizzeria_crud.model.Pizzeria;
@@ -10,8 +9,7 @@ import org.lessons.java.spring_la_mia_pizzeria_crud.repository.IngredientReposit
 import org.lessons.java.spring_la_mia_pizzeria_crud.repository.OffertaRepository;
 import org.lessons.java.spring_la_mia_pizzeria_crud.repository.PizzeriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Service;
 
 @Service 
