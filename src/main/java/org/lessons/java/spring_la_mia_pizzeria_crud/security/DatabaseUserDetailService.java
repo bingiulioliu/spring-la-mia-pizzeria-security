@@ -20,6 +20,7 @@ public class DatabaseUserDetailService implements UserDetailsService{
 
     @Override 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
+        System.out.println("TENTATIVO DI LOGIN PER USERNAME: " + username);
         // Cerco l'utente nel DB
         Optional<User> userAttempt = userRepository.findByUsername(username);
 
