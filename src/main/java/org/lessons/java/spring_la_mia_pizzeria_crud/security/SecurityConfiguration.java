@@ -18,7 +18,7 @@ public class SecurityConfiguration {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(auth -> auth
                 // 1. Risorse pubbliche e assets statici
-                .requestMatchers("/login", "/css/**", "/js/**", "/webjars/**").permitAll()
+                .requestMatchers("/", "/index", "/login", "/css/**", "/js/**", "/webjars/**").permitAll()
                 
                 // 2. Operazioni di scrittura/modifica/eliminazione: SOLO ADMIN
                 // Blocco di tutte le mutazioni HTTP (POST, PUT, DELETE) su rotte gestite

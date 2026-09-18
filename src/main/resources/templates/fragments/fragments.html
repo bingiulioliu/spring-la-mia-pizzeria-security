@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 </head>
 
@@ -29,7 +28,7 @@
                     </li>
                 </ul>
             </div>
-            <!-- MOSTRA IL FORM SE L'UTENTE È UN OSTE / ANONYMOUS -->
+            <!-- MOSTRA IL FORM PER NON LOGGATI -->
             <form sec:authorize="isAnonymous()" th:action="@{/login}" method="post" class="d-flex gap-2 ms-auto">
                 <input type="text" name="username" class="form-control form-control-sm" placeholder="Username"
                     required />
