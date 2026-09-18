@@ -25,8 +25,12 @@ public class DatabaseUserDetailService implements UserDetailsService{
         Optional<User> userAttempt = userRepository.findByUsername(username);
 
         if (userAttempt.isEmpty()){
+            System.out.println("UTENTE NON TROVATO!");
             throw new UsernameNotFoundException("Non è presente un utente con username: " + username);
         }
+        System.out.println("UTENTE TROVATO: " + userAttempt.get().getUsername());
+        System.out.println("HASH NEL DB: " + userAttempt.get().getPassword());
+        System.out.println("RUOLI UTENTE: " + userAttempt.get().getRoles().size());
         return new DatabaseUserDetails(userAttempt.get());
     }
 
